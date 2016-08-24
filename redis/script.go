@@ -84,3 +84,8 @@ func (s *Script) Load(c Conn) error {
 	_, err := c.Do("SCRIPT", "LOAD", s.src)
 	return err
 }
+
+// Hash return the script hash used by evalsha
+func (s *Script) Hash() string {
+	return s.hash
+}
