@@ -89,3 +89,8 @@ func (s *Script) Load(c Conn) error {
 func (s *Script) Hash() string {
 	return s.hash
 }
+
+// Hash return the key count used by evalsha
+func (s *Script) KeyCount() int {
+	return s.keyCount
+}
